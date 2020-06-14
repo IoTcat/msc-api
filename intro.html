@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>音乐获取 API</title>
+    <meta name="theme-color" content="#fd4b5c">
+    <script src="https://cdn.yimian.xyz/ushio-js/ushio-head.min.js"></script>
+
+  </head>
+  
+  <body>
+    <style type="text/css">h3:hover {box-shadow:0px 0px 8px #D1D1D1;}</style>
+    <div style="box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);border-radius:15px;font-size:13px;width:950px;font-family:微软雅黑,'Helvetica Neue',Arial,sans-serif;margin:10px auto 0px;border:0px solid #eee;max-width:100%;">
+      <div style="width:100%;background-color: #3174ed;background-image: linear-gradient(90deg, #3174ed 0%, #FA8BFF 35%, #3fd9fb 88%);color:#FFFFFF;border-radius:15px 15px 0 0;">
+        <h2 style="font-size:15px;word-break:break-all;padding:20px 32px;margin:0;text-align:center">音乐获取 - API</h2></div>
+      <div style="margin:0px auto;width:90%">
+        <h3 style="-webkit-transition: all .2s cubic-bezier(0, 0, 0, 0.48);-moz-transition: all .2s ease;border:.0625rem solid #fafafa;background:#fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);margin:15px 0px;padding:20px;border-radius:5px;font-size:14px;color:#333;"># 音乐获取API请求方式 #
+          <ul>
+            <li>Method: GET/POST</li></ul>
+          <hr># 请求地址 #
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none;">https://api.yimian.xyz/msc</a>
+          <br/># 参数 # 【目前仅支持网易云音乐】
+          <br/>
+          <li>type (必填)//type=single单曲信息/playlist歌单歌曲信息/url获取歌曲/cover获取封面/lrc获取歌词</li>
+          <li>id (必填，搭配type使用) //id=198401123</li>
+          <li>random //random=true 仅对playlist有效，返回的歌曲是否打乱顺序，默认false</li>
+          <li>limit //limit=10 返回歌单最大长度</li>
+          <hr>
+        # 返回数据(Json格式) #<br/><br/>
+        <li> single模式: {id: "歌曲id", name: "歌曲名称", artist: "第一作者", album: "专辑名称", url: "单曲地址", cover: "封面地址", lrc: "歌词地址"}</li><br/>
+        <li> playlist模式: [{id: "歌曲id", name: "歌曲名称", artist: "第一作者", album: "专辑名称", url: "单曲地址", cover: "封面地址", lrc: "歌词地址"}, {歌曲2..}, {歌曲3..}]</li><br/>
+        <li> 错误: {code: 500, err: "错误信息"}</li>
+        <hr># 备注 #
+          <br/>更多用法参考
+          <a href="https://www.eee.dog/tech/rand-pic-api.html">https://www.eee.dog/tech/rand-pic-api.html</a>
+          <br/>
+          <hr># 示例 #
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=single&id=36308263</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=playlist&id=808097971</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=playlist&id=808097971&limit=14</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=playlist&id=808097971&limit=14&random=true</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=url&id=36308263</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=cover&id=3384296792803059</a>
+          <br/>
+          <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/msc/?type=lrc&id=36308263</a></h3>
+      </div>
+    </div>
+  </body>
+<script src="https://cdn.yimian.xyz/ushio-js/ushio-footer.min.js"></script>
+</html>
