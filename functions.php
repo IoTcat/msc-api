@@ -5,7 +5,7 @@ include '/mnt/config/php/config.php';
 
 //connect to database
 function db__connect($servername="",$username="",$password="",$dbname="")
-{echo $GLOBALS['g_db_serverName'];
+{
 	/* reset */
 	if($servername=="") $servername=$GLOBALS['g_db_serverName'];
 	if($username=="") $username=$GLOBALS['g_db_usrName'];
