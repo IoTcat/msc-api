@@ -18,6 +18,9 @@ use Metowolf\Meting;
 
 $API = new Meting('netease');
 
+$API->cookie('MUSIC_U='.substr(md5(time()), 0, 5).'; buildver=1506310741; resolution=1920x1080; mobilename=MI5; osver=7.0.1; channel=coolapk; os=android; appver=4.2');
+
+
 $type = $_REQUEST['type'];
 $id = $_REQUEST['id'];
 $random = $_REQUEST['random'];
